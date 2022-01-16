@@ -1,7 +1,13 @@
-* {
+/* * {
     border-width: 3px;
     border-style: solid;
     border-color: red;
+} */
+
+/* base elements */
+
+body {
+    margin: 0%;
 }
 
 /* classes */
@@ -10,6 +16,11 @@
     display: flex;
     width: 10em;
     height: 15em;
+    border-width: 2px;
+    border-radius: 2px;
+    border-style: solid;
+    margin: 2px;
+    background-color: white;
 }
 
 .tileStyleActive {
@@ -23,7 +34,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    background-color: rgb(91, 147, 6);
+    padding: 2em;
+    margin: 0px;
+    margin-bottom: 5px;
+    
 }
 
 #newgrid {

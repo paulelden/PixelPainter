@@ -11,11 +11,14 @@ function spawnTile(){
     const tile = document.createElement('div');
     tile.classList.add('tileStyle');
     grid.appendChild(tile);
+    tile.addEventListener('mouseover', () => {
+        tile.classList.add('tileStyleActive')
+    });
 }
 
 function spawnTiles(n) {    // where n = number of tiles 
     for (let i = 0; i < n; i++){
-        setTimeout(spawnTile(), 1000);
+      spawnTile(); // setTimeout is not working here for some reason
     }
 }
 

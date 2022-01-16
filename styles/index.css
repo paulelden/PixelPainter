@@ -9,3 +9,8 @@
     width: 10em;
     height: 15em;
 }
+
+.tileStyleActive {
+    color: black;
+    background-color: black;
+}

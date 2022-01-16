@@ -1,16 +1,24 @@
-const container = document.getElementById("container");
-container.style.display = 'flex'; 
-container.style.alignItems = 'center';
-container.style.justifyContent = 'space-evenly';
+const grid = document.getElementById("grid"); // assigning basic properties to grid
+grid.style.display = 'flex'; 
+grid.style.alignItems = 'left';
+grid.style.justifyContent = 'space-evenly';
+grid.style.flexWrap = 'wrap';
 
-function spawnTiles(n) {    // where n = number of tiles
-    
+
+// functions
+
+function spawnTile(){
+    const tile = document.createElement('div');
+    tile.classList.add('tileStyle');
+    grid.appendChild(tile);
+}
+
+function spawnTiles(n) {    // where n = number of tiles 
     for (let i = 0; i < n; i++){
-        const tile = document.createElement('div');
-        tile.classList.add('tileStyle');
-        container.appendChild(tile);
+        setTimeout(spawnTile(), 1000);
     }
 }
+
 
 let howMany = parseInt(prompt("how many tiles?"));
 spawnTiles(howMany);

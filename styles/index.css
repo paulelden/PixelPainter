@@ -1,0 +1,11 @@
+* {
+    border-width: 3px;
+    border-style: solid;
+    border-color: red;
+}
+
+.tileStyle {
+    display: flex;
+    width: 10em;
+    height: 15em;
+}

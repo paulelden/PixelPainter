@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 * {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     font-family: 'Press Start 2P', Ubuntu, sans-serif;
 }
 
@@ -25,7 +25,7 @@ body {
     font-size: large;
     box-shadow: 2px 8px 10px rgb(4, 26, 124);
     border: 2px solid red;
-    border-radius: 4px;
+    border-radius: 5%;
 }
 
 /* IDs */
@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15%;
+    height: 10%;
     width: 100%;
     background-color: rgb(4, 26, 124);
 }
@@ -50,7 +50,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 75%;
+    height: 83%;
     width: 100%;
     background-color: rgb(124, 4, 27);
 }
@@ -60,27 +60,59 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
+    width: 25%;
     height: 100%;
 }
 
-#sizeDiv {
-    background-color: black;
-    color: white;
-    width: 60%;
-    height: 10%;
-}
-
-#gridSizeForm {
+#colorControls {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: black;
-    color: white;
+    justify-content: ;
 }
 
-#gridSpace {
+#currentColor {
+    background-color: black;
+    border: 2px solid red;
+    border-radius: 4px;
+    width: 60%;
+    height: 0%;
+    padding-bottom: 50%;
+    box-shadow: 2px 8px 10px rgb(4, 26, 124);
+}
+
+
+#canvasSizeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    box-shadow: 2px 8px 10px rgb(4, 26, 124);
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+#canvasSizeText {
+    width: 80%;
+    height: 25%;
+    text-align: center;
+}
+
+#sizeInput {
+    width: 80%;
+    height: 25%;
+}
+
+#newCanvas {
+    width: 80%;
+    height: 20%;
+}
+
+#canvasSpace {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,11 +120,18 @@ body {
     height: 100%;
 }
 
+#canvas {
+    width: 35vw;
+    height: 35vw;
+    background-color: white;
+    box-shadow: 8px 15px 10px rgb(4, 26, 124);
+}
+
 #footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10%;
+    height: 7%;
     width: 100%;
     margin: 0%;
     background-color: rgb(4, 26, 124);

@@ -16,7 +16,7 @@ body {
 }
 /* classes */
 
-.button {
+.control {
     background-color: black;
     color: white;
     width: 60%;
@@ -25,7 +25,7 @@ body {
     font-size: large;
     box-shadow: 2px 8px 10px rgb(4, 26, 124);
     border: 2px solid red;
-    border-radius: 5%;
+    border-radius: 2%;
 }
 
 /* IDs */
@@ -60,27 +60,55 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    width: 25%;
+    width: 30%;
     height: 100%;
+    padding-left: 5%;
 }
 
 #colorControls {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: ;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 20%;
+}
+
+#colorText {
+    
+}
+
+#colorControlsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40%;
+}
+
+#blackButton {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 75px;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 4px;
+    width: 40%;
+    height: 0%;
+    padding-bottom: 30%;
+    box-shadow: 2px 8px 10px rgb(4, 26, 124);
 }
 
 #currentColor {
     background-color: black;
-    border: 2px solid red;
+    border: 2px solid white;
     border-radius: 4px;
-    width: 60%;
+    width: 40%;
     height: 0%;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
     box-shadow: 2px 8px 10px rgb(4, 26, 124);
 }
-
 
 #canvasSizeForm {
     display: flex;
@@ -100,16 +128,21 @@ body {
     width: 80%;
     height: 25%;
     text-align: center;
+    margin-bottom: -20px;
 }
 
 #sizeInput {
     width: 80%;
     height: 25%;
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 5px;
 }
 
 #newCanvas {
     width: 80%;
     height: 20%;
+    margin-bottom: 5px;
 }
 
 #canvasSpace {
@@ -136,4 +169,8 @@ body {
     margin: 0%;
     background-color: rgb(4, 26, 124);
     color: white;
+}
+
+#footerText {
+
 }

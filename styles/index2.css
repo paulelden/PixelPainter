@@ -97,13 +97,8 @@ body {
 }
 
 #currentColor {
-    background-color: black;
-    border: 2px solid white;
-    border-radius: 4px;
     width: 40%;
-    height: 0%;
-    padding-bottom: 30%;
-    box-shadow: 2px 8px 10px rgb(4, 26, 124);
+    height: 132%;
 }
 
 #canvasSizeForm {

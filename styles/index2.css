@@ -28,6 +28,10 @@ body {
     border-radius: 2%;
 }
 
+.newTile {
+    border: 1px solid gray;
+}
+
 /* IDs */
 
 #header {
@@ -145,6 +149,7 @@ body {
 }
 
 #canvas {
+    display: grid;
     width: 35vw;
     height: 35vw;
     background-color: white;

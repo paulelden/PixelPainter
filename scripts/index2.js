@@ -12,15 +12,17 @@ let canvasSize = document.getElementById('sizeInput').value;
 
 // listeners 
 
-blackButton.addEventListener('onclick', function() {
-    selectedColor.value = '#000000';
+blackButton.addEventListener('click', function() {
+    selectedColor = '#000000';
+    colorSelector.value = '#000000';
 });
 
-colorSelector.addEventListener('change', function() {
-    selectedColor.value = EventTarget.value;
-    console.log(selectedColor.value);
+colorSelector.addEventListener('change', function(e) {
+    selectedColor = colorSelector.value;
+    console.log(selectedColor);
     return selectedColor;
 });
+
 
 // functions
 

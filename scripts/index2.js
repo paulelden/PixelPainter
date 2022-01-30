@@ -1,4 +1,4 @@
-// variables and listeners
+// variables
 
 const canvas = document.getElementById('canvas');
 const blackButton = document.getElementById('blackButton');
@@ -7,6 +7,8 @@ const rainbowMode = document.getElementById('rainbowMode');
 const clearButton = document.getElementById('clearButton');
 const sizeinput = document.getElementById('sizeInput');
 const newCanvas = document.getElementById('newCanvas');
+const toggleGrid = document.getElementById('toggleGrid');
+
 let selectedColor = document.getElementById('colorSelector').value;
 let canvasSize = document.getElementById('sizeInput').value;
 

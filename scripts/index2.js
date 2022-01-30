@@ -4,10 +4,11 @@ const canvas = document.getElementById('canvas');
 const blackButton = document.getElementById('blackButton');
 const colorSelector = document.getElementById('colorSelector');
 const rainbowMode = document.getElementById('rainbowMode');
+const toggleGrid = document.getElementById('toggleGrid');
 const clearButton = document.getElementById('clearButton');
 const sizeinput = document.getElementById('sizeInput');
 const newCanvas = document.getElementById('newCanvas');
-const toggleGrid = document.getElementById('toggleGrid');
+
 
 let selectedColor = document.getElementById('colorSelector').value;
 let canvasSize = document.getElementById('sizeInput').value;
@@ -26,28 +27,31 @@ colorSelector.addEventListener('change', function() {
     return selectedColor;
 });
 
-toggleGrid.addEventListener('click', function() {
-    let tiles = canvas.querySelectorAll('div');
-    if (tiles[0].classList.contains('grid')) {
-        tiles.forEach(tile => tile.classList.remove('grid'));
-    }
-    else {
-        tiles.forEach(tile => tile.classList.add('grid'));
-    }
-})
+toggleGrid.addEventListener('click', toggle);
 
 clearButton.addEventListener('click', clearCanvas);
 
+newCanvas.addEventListener('click', function(){
+    generateCanvas(sizeinput.value);
+})
 
 // functions
 
 function generateCanvas(canvasSize) {
     canvas.style.gridTemplateColumns = `repeat(${canvasSize}, 1fr)`;
     canvas.style.gridTemplateRows = `repeat(${canvasSize}, 1fr)`;
+    if (canvas.hasChildNodes){
+        let tile = canvas.firstElementChild;
+        while (tile) {
+            canvas.removeChild(tile);
+            tile = canvas.firstElementChild;
+        }
+    }
 
     for (let i = 0; i < canvasSize**2; i++) {
         const tile = document.createElement('div');
-        tile.classList.add('newTile');
+        tile.classList.add('grid');
+        tile.style.backgroundColor = '#ffffff';
         canvas.appendChild(tile);
         tile.addEventListener('mouseover', function (e) {
             tile.style.backgroundColor = selectedColor;
@@ -58,6 +62,16 @@ function generateCanvas(canvasSize) {
 
 function updateColor(selectedColor) {
     tile.style.backgroundColor = selectedColor;
+}
+
+function toggle() {
+    let tiles = canvas.querySelectorAll('div');
+    if (tiles[0].classList.contains('grid')) {
+        tiles.forEach(tile => tile.classList.remove('grid'));
+    }
+    else {
+        tiles.forEach(tile => tile.classList.add('grid'));
+    }
 }
 
 function clearCanvas() {

@@ -26,6 +26,16 @@ colorSelector.addEventListener('change', function() {
     return selectedColor;
 });
 
+toggleGrid.addEventListener('click', function() {
+    let tiles = canvas.querySelectorAll('div');
+    if (tiles[0].classList.contains('grid')) {
+        tiles.forEach(tile => tile.classList.remove('grid'));
+    }
+    else {
+        tiles.forEach(tile => tile.classList.add('grid'));
+    }
+})
+
 clearButton.addEventListener('click', clearCanvas);
 
 

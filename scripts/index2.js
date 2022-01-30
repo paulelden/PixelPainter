@@ -3,8 +3,8 @@
 const canvas = document.getElementById('canvas');
 const blackButton = document.getElementById('blackButton');
 const colorSelector = document.getElementById('colorSelector');
-const rainbowMode = document.getElementById('rainbowMode');
-const toggleGrid = document.getElementById('toggleGrid');
+const toggleRainbowButton = document.getElementById('toggleRainbowButton');
+const toggleGridButton = document.getElementById('toggleGridButton');
 const clearButton = document.getElementById('clearButton');
 const sizeinput = document.getElementById('sizeInput');
 const newCanvas = document.getElementById('newCanvas');
@@ -12,6 +12,7 @@ const newCanvas = document.getElementById('newCanvas');
 
 let selectedColor = document.getElementById('colorSelector').value;
 let canvasSize = document.getElementById('sizeInput').value;
+let rainbow = false;
 
 // listeners 
 
@@ -27,7 +28,9 @@ colorSelector.addEventListener('change', function() {
     return selectedColor;
 });
 
-toggleGrid.addEventListener('click', toggle);
+toggleRainbowButton.addEventListener('click', toggleRainbow);
+
+toggleGridButton.addEventListener('click', toggleGrid);
 
 clearButton.addEventListener('click', clearCanvas);
 
@@ -54,17 +57,36 @@ function generateCanvas(canvasSize) {
         tile.style.backgroundColor = '#ffffff';
         canvas.appendChild(tile);
         tile.addEventListener('mouseover', function (e) {
-            tile.style.backgroundColor = selectedColor;
+            if (rainbow == true){
+                tile.style.backgroundColor = randomColor();
+            }
+            else {
+                tile.style.backgroundColor = selectedColor;
+            }
         });
     }
 
+}
+
+function randomColor() {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    return "#" + randomColor;
 }
 
 function updateColor(selectedColor) {
     tile.style.backgroundColor = selectedColor;
 }
 
-function toggle() {
+function toggleRainbow() {
+    if (rainbow == true) {
+        rainbow = false;
+    }
+    else {
+        rainbow = true;
+    }
+}
+
+function toggleGrid() {
     let tiles = canvas.querySelectorAll('div');
     if (tiles[0].classList.contains('grid')) {
         tiles.forEach(tile => tile.classList.remove('grid'));

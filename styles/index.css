@@ -1,55 +1,172 @@
-/* * {
-    border-width: 3px;
-    border-style: solid;
-    border-color: red;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-/* base elements */
-
-body {
-    margin: 0%;
+* {
+    /* border: 2px solid red; */
+    font-family: 'Press Start 2P', Ubuntu, sans-serif;
 }
 
+/* elements */
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+    margin: 0%;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
 /* classes */
 
-.tileStyle {
-    display: flex;
-    width: 10em;
-    height: 15em;
-    border-width: 2px;
-    border-radius: 2px;
-    border-style: solid;
-    margin: 2px;
-    background-color: white;
+.control {
+    background-color: black;
+    color: white;
+    width: 60%;
+    height: 10%;
+    font-weight: bold;
+    font-size: large;
+    box-shadow: 2px 8px 10px rgb(4, 26, 124);
+    border: 2px solid red;
+    border-radius: 2%;
 }
 
-.tileStyleActive {
-    color: black;
-    background-color: black;
+.grid {
+    border: 1px solid gray;
 }
+
+.rainbow {
+    /* placeholder for JS trigger */
+} 
 
 /* IDs */
 
 #header {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: rgb(91, 147, 6);
-    padding: 2em;
-    margin: 0px;
-    margin-bottom: 5px;
-    
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    background-color: rgb(4, 26, 124);
 }
 
-#newgrid {
+#title {
+    font-size: 42px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
+
+#workspace {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 83%;
+    width: 100%;
+    background-color: rgb(124, 4, 27);
+}
+
+#controlPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    height: 100%;
+    padding-left: 5%;
+}
+
+#colorControls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 20%;
+}
+
+#colorControlsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40%;
+}
+
+#blackButton {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 75px;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 4px;
+    width: 40%;
+    height: 0%;
+    padding-bottom: 30%;
+    box-shadow: 2px 8px 10px rgb(4, 26, 124);
+}
+
+#colorSelector {
+    width: 40%;
+    height: 132%;
+}
+
+#canvasSizeForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    box-shadow: 2px 8px 10px rgb(4, 26, 124);
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+#canvasSizeText {
+    width: 80%;
+    height: 25%;
+    text-align: center;
+    margin-bottom: -20px;
+}
+
+#sizeInput {
+    width: 80%;
+    height: 25%;
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 5px;
+}
+
+#newCanvas {
+    width: 80%;
+    height: 20%;
+    margin-bottom: 5px;
+}
+
+#canvasSpace {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 100px;
-    background-color: rgb(62, 6, 148);
+    width: 100%;
+    height: 100%;
+}
+
+#canvas {
+    display: grid;
+    width: 35vw;
+    height: 35vw;
+    background-color: white;
+    box-shadow: 8px 15px 10px rgb(4, 26, 124);
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7%;
+    width: 100%;
+    margin: 0%;
+    background-color: rgb(4, 26, 124);
     color: white;
-    border-radius: 4px;
-    font-weight: bold;
-    font-family: Ubuntu, sans-serif;
 }

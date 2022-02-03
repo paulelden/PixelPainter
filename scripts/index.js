@@ -6,6 +6,7 @@ const colorSelector = document.getElementById('colorSelector');
 const toggleRainbowButton = document.getElementById('toggleRainbowButton');
 const toggleGridButton = document.getElementById('toggleGridButton');
 const clearButton = document.getElementById('clearButton');
+const canvasSizeForm = document.getElementById('canvasSizeForm');
 const sizeinput = document.getElementById('sizeInput');
 const newCanvas = document.getElementById('newCanvas');
 
@@ -33,6 +34,11 @@ toggleRainbowButton.addEventListener('click', toggleRainbow);
 toggleGridButton.addEventListener('click', toggleGrid);
 
 clearButton.addEventListener('click', clearCanvas);
+
+canvasSizeForm.addEventListener('submit', function(e) {
+    document.getElementById('newCanvas').click();
+    e.preventDefault();
+})
 
 newCanvas.addEventListener('click', function(){
     generateCanvas(sizeinput.value);

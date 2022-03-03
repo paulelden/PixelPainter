@@ -25,7 +25,6 @@ blackButton.addEventListener('click', function() {
 
 colorSelector.addEventListener('change', function() {
     selectedColor = colorSelector.value;
-    console.log(selectedColor);
     return selectedColor;
 });
 
